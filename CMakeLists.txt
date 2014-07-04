@@ -126,6 +126,7 @@ add_library(ardrone_driver
     src/teleop_twist.cpp
 )
 target_link_libraries(ardrone_driver
+ardrone_sdk
 #  pc_ardrone
 #  avcodec
 #  swscale
@@ -140,12 +141,12 @@ add_library(ardrone_sdk
     src/ardrone_sdk.cpp
 )
 target_link_libraries(ardrone_sdk
-#  pc_ardrone
-#  avcodec
-#  swscale
-#  avutil
-#  vlib
-#  sdk
+  pc_ardrone
+  avcodec
+  swscale
+  avutil
+  vlib
+  sdk
   ${Boost_LIBRARIES}
   ${catkin_LIBRARIES}
 )
